@@ -1,0 +1,194 @@
+--------------------------------------------------------------------------------
+Questions On Lamdas
+-------------------------------------------------------------------------------
+
+
+🔰BASIC LEVEL (Foundations)
+1️⃣ What is a Lambda?
+
+Write a lambda that prints "Hello Kotlin"
+
+2️⃣ Lambda with Parameters
+
+Write a lambda that takes two Int values and returns their sum
+
+3️⃣ Lambda Assigned to Variable
+
+Store a lambda in a variable named square that returns the square of a number
+
+4️⃣ Lambda Without Explicit Types
+
+Rewrite this lambda by removing explicit types:
+
+val add: (Int, Int) -> Int = { a: Int, b: Int -> a + b }
+
+5️⃣ Lambda with Unit Return Type
+
+Write a lambda that takes a String and prints it
+
+🟡 INTERMEDIATE LEVEL
+6️⃣ Using it Keyword
+
+Write a lambda that doubles a number using it
+
+7️⃣ Lambda as Function Parameter
+
+Write a function operate(a: Int, b: Int, action: (Int, Int) -> Int)
+
+Call it using a lambda to multiply numbers
+
+8️⃣ Trailing Lambda Syntax
+
+Convert this code to trailing lambda syntax:
+
+listOf(1, 2, 3).forEach({ println(it) })
+
+9️⃣ Lambdas with Collections
+
+Use map to convert a list of integers into their squares
+
+🔟 Filtering with Lambda
+
+Filter even numbers from a list using filter
+
+🟠 ADVANCED LEVEL
+1️⃣1️⃣ Lambda Returning Another Lambda
+
+Write a function that returns a lambda which multiplies a number by a given value
+
+1️⃣2️⃣ Higher-Order Function
+
+Create a higher-order function that takes a lambda and executes it twice
+
+1️⃣3️⃣ Closures
+
+Write a lambda that increments a variable defined outside the lambda
+
+1️⃣4️⃣ Lambda with Multiple Statements
+
+Write a lambda that prints a message and then returns the length of a string
+
+1️⃣5️⃣ Anonymous Function vs Lambda
+
+Rewrite this lambda as an anonymous function:
+
+val sum = { a: Int, b: Int -> a + b }
+
+🔴 EXPERT / REAL-WORLD LEVEL
+1️⃣6️⃣ Inline Lambda
+
+Create an inline function that accepts a lambda and measures execution time
+
+1️⃣7️⃣ Lambda with Receiver
+
+Write a lambda with receiver for building a String
+
+1️⃣8️⃣ Non-local Return
+
+Demonstrate a non-local return using a lambda inside an inline function
+
+1️⃣9️⃣ crossinline Keyword
+
+Create a scenario where crossinline is required
+
+2️⃣0️⃣ Real-World Use Case
+
+Build a simple validation framework using lambdas:
+
+One lambda for email validation
+
+One lambda for password validation
+
+🧠 BONUS CHALLENGES
+
+🔥 Implement your own versions of:
+
+myMap()
+
+myFilter()
+
+myForEach()
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+More Questions
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🟢 Beginner Level (Basics of Lambdas)
+
+Write a lambda that takes two integers and returns their sum.
+
+Create a lambda that takes a String and prints "Hello, <name>".
+
+Define a lambda that checks if a number is even.
+
+Write a lambda that returns the square of a number.
+
+Create a lambda with no parameters that prints "Welcome to Kotlin Lambdas".
+
+🟡 Intermediate Level (Using Lambdas with Collections)
+
+Given a list of integers, use a lambda with filter to get all even numbers.
+
+Use map with a lambda to convert a list of strings to uppercase.
+
+Use forEach and a lambda to print each element of a list.
+
+Given a list of numbers, use a lambda to find all numbers greater than 10.
+
+Sort a list of strings by length using a lambda.
+
+🟠 Intermediate–Advanced (Higher-Order Functions)
+
+Write a function that takes two integers and a lambda, and applies the lambda to those integers.
+
+Create a lambda that performs subtraction and pass it to the function above.
+
+Write a function that returns a lambda that multiplies two numbers.
+
+Use a lambda as a parameter to calculate the result of an operation (+, -, *, /).
+
+Create a lambda that takes another lambda as input.
+
+🔵 Advanced Level (Real-World Lambda Usage)
+
+Use reduce with a lambda to find the sum of a list.
+
+Use fold to calculate the product of a list with an initial value.
+
+Write a lambda that handles null safety using let.
+
+Use a lambda with apply to initialize an object.
+
+Use a lambda with run to perform multiple operations on an object.
+
+🟣 Challenge Problems
+
+Write a lambda that filters a list of people objects whose age is above 18.
+
+Use a lambda to count the frequency of each word in a sentence.
+
+Write a lambda that validates a password (minimum 8 chars, one digit).
+
+Create a higher-order function that retries an operation using lambdas.
+
+Implement a custom map function using lambdas.
+
+💡 Bonus Tip
+
+When practicing, focus on:
+
+{ parameters -> body }
+
+Using it for single parameters
+
+Lambdas with return values
+
+Lambdas as function parameters
+
+If you want, I can also:
+✅ Provide solutions
+✅ Convert these into coding exercises
+✅ Share real interview questions
+✅ Explain each concept with examples
+
+Just tell me! 😊

@@ -1,4 +1,4 @@
-package usablity03
+package _4Usablity
 
 fun Int.isEven(){
     if (this%2==0){
@@ -58,7 +58,6 @@ fun List<Int>.sum():Int{
 fun String.getLast():Char{
    return this[this.length-1]
 }
-
 
 
 

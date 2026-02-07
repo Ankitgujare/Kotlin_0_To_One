@@ -1,66 +1,62 @@
 package _4Usablity;
 
-class stud{
-    int roll=101;
-    String name="Ishwari";
-    String branch="ECE";
+interface Payment{
+    void dopayment(int amount);
+    void paybills(int amount);
 
-    void getstudentinfo(){
-        //TODO print student info
-    }
+    void bankTransfer(String AccNumber,int Amount);
 
 }
 
+class PhonePay implements Payment{
 
-class studentmarks extends stud{
-
-    int java=66;
-    int pyton=88;
-    int c=77;
-
-    void showstudentmarks(){
-        //todo print student marks
+    @Override
+    public void dopayment(int amount) {
+        System.out.println(amount+" paid using PhonePay");
     }
 
-
-}
-
-class BookIssued extends stud{
-    String book1;
-    String book2;
-    String getBook3;
-
-
-    void getIssuedBook(){
-        //todo complete this
+    @Override
+    public void paybills(int amount) {
+        //Todo implement this
     }
 
-
+    @Override
+    public void bankTransfer(String AccNumber, int Amount) {
+        //todo implement this
+    }
 }
 
 
+class GooglePay implements Payment{
 
+    @Override
+    public void dopayment(int amount) {
+        System.out.println(amount +" Paid using Google Pay");
+    }
 
+    @Override
+    public void paybills(int amount) {
+        //Todo implement this
+    }
+
+    @Override
+    public void bankTransfer(String AccNumber, int Amount) {
+        //Todo implement this
+    }
+}
 
 public class code {
+
     public static void main(String[] args) {
 
-        studentmarks s1=new studentmarks();
-        s1.getstudentinfo();
-        s1.showstudentmarks();
+        PhonePay s1=new PhonePay();
+        s1.dopayment(100);
 
-
-        BookIssued b1=new BookIssued();
-        b1.getstudentinfo();
-        b1.getIssuedBook();
-    
-
-
-
-
-
+        GooglePay G1=new GooglePay();
+        G1.dopayment(200);
 
     }
+
 }
 
 

@@ -1,0 +1,8 @@
+# IntelliJ / Android
+out/
+build/
+.gradle/
+.idea/
+
+# Compiled files
+*.class

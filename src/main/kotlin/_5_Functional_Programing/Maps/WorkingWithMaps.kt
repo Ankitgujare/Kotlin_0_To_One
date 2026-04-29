@@ -57,4 +57,35 @@ fun main(){
     println(stu1[1])
     println(stu1.get(1))
 
+
+    //we have a diffrent Useful Functions too
+    //Fn to Convert the List into Map
+
+   val names= listOf("Aman","Pranay","Pooja","Hrishikesh")
+   val age= listOf<Int>(22,14,25,21)
+
+   //we have a zip function to join two List
+
+  val newList= names.zip(age){name,age->
+      Person(name,age)
+  }
+
+
+
+  //create a map out of List
+  val persons=newList.groupBy(Person::age)
+    println(persons)
+
+
+
+
+
+
+
 }
+
+
+data class Person(
+    val name:String,
+    val age:Int
+)

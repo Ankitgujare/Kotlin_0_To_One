@@ -21,6 +21,7 @@ Lets start with basic Questions
 
 fun main() {
 
+    lamdaexample1()
     println(sum(10,20))
     println(s1(1,2))
     println(square(2))
@@ -29,7 +30,9 @@ fun main() {
     println("Avg is "+ calAvg(10,2,5))
     println(greet1("Good Evening"))
     var name ="John"
+    println(greet("Good Morning"))
     println(name)
+    lamdaexample()
 
 }
 
@@ -52,6 +55,21 @@ var greet1:(String)->String={"greet is $it"}
 
 
 
+
+
+fun lamdaexample(){
+    val number= listOf(1,2,3,4).map{
+        it*2
+    }
+    println(number)
+}
+
+
+fun lamdaexample1(){
+    val numbers= listOf(1,2,3,4)
+    val x={demo:Int->"\"$demo\""}
+    val result= numbers.joinToString(transform = x)
+}
 
 
 

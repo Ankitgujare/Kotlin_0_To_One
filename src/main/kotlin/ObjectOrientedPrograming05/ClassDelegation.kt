@@ -2,6 +2,20 @@ package ObjectOrientedPrograming05
 
 
 
+class IndianChef : chef {
+
+    private var _name=""
+    override var name: String
+        get() = _name
+        set(value) {
+            _name=value
+        }
+
+    override fun cookFood() {
+        println("coocking the Delicious Indian food..")
+    }
+}
+
 
 fun main(){
     val freelancer=freelancer()
@@ -16,6 +30,20 @@ fun main(){
     val fullstackDev=fullstackDev()
     fullstackDev.code()
     fullstackDev.codebackend()
+
+
+    val chef1=IndianChef()
+
+    chef1.name="John"
+    println(chef1)
+    println(chef1.name)
+
+    chef1.cookFood()
+
+    val a1=Aman()
+    a1.cookFood()
+
+
 
 }
 
@@ -81,5 +109,31 @@ class intern2:backEndDeveloper{
 
 class fullstackDev:programmer by JavaProgramer(),
         backEndDeveloper by intern2()
+
+
+
+interface chef{
+
+
+    var name: String;
+     fun cookFood(){
+        println("Coocking delicous Food")
+    }
+
+
+}
+
+
+
+
+
+class Aman : chef by IndianChef(){
+    override fun cookFood() {
+        println("Aman is coocking the Delicious Food")
+    }
+}
+
+
+
 
 

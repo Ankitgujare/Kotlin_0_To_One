@@ -9,7 +9,7 @@ fun main() {
         .asSequence()
         .filter { it%2==0 }
         .map { it*10 }
-        .toList()
+        .toList()   
 
     println(num)
 

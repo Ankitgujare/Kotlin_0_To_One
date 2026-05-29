@@ -11,6 +11,23 @@ fun main(){
 
     val Validate=Authstate.Login("Ankit","ankit@123")
     handleAuth(Validate)
+
+
+    var i=0
+    var status:DownloadState=DownloadState.downloadstarted
+    while (i in 1..100 step 1){
+        if (i in 3..5){
+            downloadFile(status)
+        }
+        if (i in 10..20){
+             status= DownloadState.downloading("Download started")
+        }
+
+        if (i in 30..50){
+            status= DownloadState.Finished("File is ready c:document/academicDocs")
+        }
+        i++
+    }
 }
 
 
@@ -121,3 +138,40 @@ fun doPayment2(paymentMethod: PaymentMethod){
 
 
 //todo Sealed class with Generic Types:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//todo dowloading progress Example
+
+fun downloadFile(downloading: DownloadState){
+    when(downloading){
+
+
+
+
+
+
+    }
+
+}
+
+
+

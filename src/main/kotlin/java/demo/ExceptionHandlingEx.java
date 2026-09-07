@@ -1,7 +1,6 @@
-package _4Usablity;
+package java.demo;
 
-
-public class demo {
+public class ExceptionHandlingEx {
     public static void main(String[] args) {
 
         System.out.println("Running..1");
@@ -9,14 +8,8 @@ public class demo {
         System.out.println("Running..3");
         System.out.println("Running..4");
         System.out.println("Running..5");
-
-        try{
-            int div=10/0;
-            System.out.println("Running..6"+div);
-        }catch (Exception ex){
-            System.out.println("Cannot Div by 0");
-        }
-
+        int div=10/0;
+        System.out.println("Running..6"+div);
         System.out.println("Running..7");
         System.out.println("Running..8");
         System.out.println("Running..9");
@@ -29,12 +22,9 @@ public class demo {
 
 
 
+
+
 }
-
-
-
-
-
 
 
 

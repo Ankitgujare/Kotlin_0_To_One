@@ -10,12 +10,21 @@ public class demo {
         System.out.println("Running..4");
         System.out.println("Running..5");
 
-        try{
-            int div=10/0;
-            System.out.println("Running..6"+div);
-        }catch (Exception ex){
-            System.out.println("Cannot Div by 0");
-        }
+       int a=10;
+       int b=0;
+
+       try{
+           if (b==0){
+               throw new ArithmeticException("Cannot div by 0");
+           }
+           int div=a/b;
+           System.out.println(div);
+       }catch (ArithmeticException ex){
+           System.out.println("Cannot div By 0");
+       }
+
+
+
 
         System.out.println("Running..7");
         System.out.println("Running..8");
@@ -24,6 +33,20 @@ public class demo {
 
 
 
+
+        int age=12;
+
+        try {
+                if (age<18){
+                    throw new Exception();
+                }
+                System.out.println("You can Vote");
+            }catch (Exception ex){
+                System.out.println("age > 18 to Vote");
+        }
+
+
+        System.out.println("Program finished");
 
     }
 

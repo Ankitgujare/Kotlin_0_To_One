@@ -2,7 +2,7 @@ package _4Usablity;
 
 
 public class demo {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         System.out.println("Running..1");
         System.out.println("Running..2");
@@ -33,22 +33,49 @@ public class demo {
 
 
 
-
-        int age=12;
-
-        try {
-                if (age<18){
-                    throw new Exception();
-                }
-                System.out.println("You can Vote");
-            }catch (Exception ex){
-                System.out.println("age > 18 to Vote");
+        try{
+            int result=10/2; //Arithmatic exception
+        }catch (ArithmeticException ex){
+            System.out.println("Cannot Div by 0");
+        }finally {
+            System.out.println("Iam Finally..");
         }
 
 
-        System.out.println("Program finished");
+
+
+
+
+
+
+        try{
+            doPayment();  //Arith
+        }catch (ArithmeticException ex){
+            System.out.println("Arithmatic Exception");
+        }catch (IndexOutOfBoundsException exception){
+            System.out.println("IndexOutOfBoundsException pointer exception");
+        }catch (NullPointerException exception){
+            System.out.println("this is NullPointerException");
+        }catch (Exception exception){
+            System.out.println("this is Exception handle All");
+        }
+
+        System.out.println("Program Finished");
 
     }
+
+   static void doPayment() throws Exception{
+
+        A obj=null;  //null Pointer exception
+        obj.say();
+
+
+       // int ans=10/0;
+        /*int [] number={10,20,30,40};
+        System.out.println(number[6]);*/
+    }
+
+
 
 
 
@@ -56,6 +83,11 @@ public class demo {
 
 
 
+class A{
+    void say(){
+        System.out.println("Hi Ishwari");
+    }
+}
 
 
 

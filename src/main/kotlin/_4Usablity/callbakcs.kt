@@ -42,6 +42,44 @@ fun main(){
         println("$status ... $error")
     }
 
+    devide(10,0,::success){error->
+        println("$error")
+    }
+    fetchUser(
+        1,
+        onSuccess = {
+            println(it)
+        },
+        onFailture = {
+            println(it)
+        })
+
+    fetchUser(
+        101,
+        onSuccess = {
+            println(it)
+        },
+        onFailture = {
+            println(it)
+        })
+
+    processOrder(
+        2,
+        onSuccess = {
+            println(it)
+        },
+        onFailure = {
+            println(it)
+        })
+    processOrder(
+        0,
+        onSuccess = {
+            println(it)
+        },
+        onFailure = {
+            println(it)
+        })
+
 }
 
 
@@ -138,4 +176,48 @@ fun fetchData(userId:Int,callback:(String?,String?)->Unit){
         callback("Failed","User not Found")
 
     }
+}
+
+fun devide(
+    a:Int,b:Int,
+    success:(Int)->Unit,
+    error:(String)->Unit
+){
+    if (b==0){
+        error("Cannot div By 0")
+        return
+    }
+    val result=a/b;
+    success(result)
+
+}
+
+fun success(result:Int){
+    println("Result is Cal Successfuly $result")
+}
+
+
+
+fun fetchUser(
+    userId:Int,
+    onSuccess:(String)->Unit,
+    onFailture:(String)->Unit
+){
+    if (userId==1){
+        onSuccess("User Found Ankit with $userId")
+        return
+    }
+    onFailture("no User Found for the Provided UserId")
+}
+
+fun processOrder(
+    orderId:Int,
+    onSuccess:(String)->Unit,
+    onFailure:(String)->Unit
+){
+    if (orderId!=0){
+        onSuccess("Order is Successfuly")
+        return
+    }
+    onFailure("Error")
 }

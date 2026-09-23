@@ -33,11 +33,5 @@ public class ExceptionHandlingEx {
 
 
 
-class A{
-    static class B{
-        String name="Ishwari";
-    }
-}
-
 
 

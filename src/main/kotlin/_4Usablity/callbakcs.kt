@@ -80,6 +80,19 @@ fun main(){
             println(it)
         })
 
+    doPayment(
+        object :PaymentCallback{
+            override fun doUpiPaymentSaleTransaction(amount: Long, upitransactionid: String) {
+                println("Upi Payment Successful with $amount and $upitransactionid")
+            }
+            override fun doCardPayment(amount: Long, cardtype: String) {
+                println("Cash Payment Successful with $amount and  Cardtype $cardtype")
+            }
+        },
+        true
+
+
+    )
 }
 
 
@@ -220,4 +233,18 @@ fun processOrder(
         return
     }
     onFailure("Error")
+}
+
+interface PaymentCallback{
+    fun doUpiPaymentSaleTransaction(amount:Long,upitransactionid:String)
+    fun doCardPayment(amount:Long,cardtype:String)
+
+}
+
+fun doPayment(paymentCallback: PaymentCallback,flag:Boolean){
+    if (flag){
+        paymentCallback.doUpiPaymentSaleTransaction(1000L,"12121212")
+        return
+    }
+    paymentCallback.doCardPayment(2000L,"Credit Card")
 }

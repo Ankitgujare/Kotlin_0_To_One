@@ -95,10 +95,34 @@ class student{
 
 
 
+fun List<Int>.process(operation: (Int) -> Int): List<Int>{
+    return this.map{element->
+        operation(element)
+    }
+}
 
 
+fun List<Int>.findmax():Int?{
+    return this.maxOrNull()
+}
+
+fun List<Int>.findmaxmanualy():Int?{
+  return this.maxOf{
+        it
+    }.toInt()
+}
 
 
+fun List<Int>.findeven():List<Int>{
+    return this.filter {
+        it%2==0
+    }
+}
+
+
+fun List<Int>.removeduplicates():List<Int>{
+    return this.toSet().toList()
+}
 
 
 
@@ -130,9 +154,22 @@ fun main() {
     val ans= n2.sum()
     println(ans)
 
-    var str3="Android"
-   var y= str3.getLast()
+    val str3="Android"
+    val y= str3.getLast()
     println(y)
+
+    val numbers= listOf(1,2,3,4)
+    val doubleNumbers=numbers.process {
+        it*2
+    }
+    println("Doubled the List $doubleNumbers")
+    println("max element from the List ${doubleNumbers.findmax()}")
+    println("max element from the List manualy ${doubleNumbers.findmaxmanualy()}")
+
+    val n3= listOf(1,1,2,3,4,5,5,6,7)
+    println("List of even Number from random List ${n3.findeven()}")
+    println("removed Duplicate elements from List ${n3.removeduplicates()}")
+
 
 
 }

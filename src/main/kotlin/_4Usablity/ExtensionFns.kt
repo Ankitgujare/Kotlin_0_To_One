@@ -60,6 +60,11 @@ fun String.getLast():Char{
 }
 
 
+fun List<Int>.findsecondlargest():Int?{
+    return this.sortedDescending()
+        .getOrNull(1)
+
+}
 
 
 
@@ -170,6 +175,48 @@ fun main() {
     println("List of even Number from random List ${n3.findeven()}")
     println("removed Duplicate elements from List ${n3.removeduplicates()}")
 
-
+    val n4= listOf(11,22,1199,1122)
+    println("Second Largest element fron the List n4 ${n4.findsecondlargest()}")
+    println("first Largest element from the List n4 ${n4.firstlargest()}")
+    println("second Largest element from the List n4 ${n4.findsecondlargest2()}")
 
 }
+
+
+fun List<Int>.firstlargest():Int?{
+
+    var max=this[0]
+
+    for (element in this){
+        if (element>max){
+            max=element
+        }
+    }
+
+    return max
+}
+
+fun List<Int>.findsecondlargest2():Int?{
+
+
+    var fmax=this[0]
+
+    //find first laregst
+    for (element in this){
+        if (element>fmax){
+            fmax=element
+        }
+    }
+
+    var smax=0
+    for (element in this){
+       if (element>smax && element<fmax){
+           smax=element
+       }
+    }
+
+
+
+    return smax
+}
+

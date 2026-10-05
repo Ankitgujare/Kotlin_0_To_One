@@ -26,7 +26,7 @@ fun applyexample(){
 
     println(p.name)
     println(p.roll)
-    List
+
 
 }
 

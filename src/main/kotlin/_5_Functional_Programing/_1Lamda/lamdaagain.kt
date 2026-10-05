@@ -1,5 +1,6 @@
 package _5_Functional_Programing._1Lamda
 
+import ObjectOrientedPrograming05.intern2
 import javax.print.DocFlavor.STRING
 
 fun main(){
@@ -21,6 +22,10 @@ fun main(){
     println("The largest element is $largest")
     val avgTwo= calAvg(10,20)
     println(avgTwo)
+    greet1()
+    perform("Ankit")
+    addition(20,10)
+    addition2(10,200)
 }
 
 
@@ -110,4 +115,24 @@ val multi={a:Int,b:Int->
 
 val multi2:(Int,Int)->Int={a,b->
     a*b
+}
+
+
+
+
+val greet1={
+    println("Good afternoon")
+}
+
+
+val perform={name:String->
+    println("name is $name")
+}
+
+val addition={a:Int,b:Int->
+    println(a+b)
+}
+
+val addition2:(a:Int,ba:Int)->Unit={a,b->
+    println("the sum of two number is ${a+b}")
 }

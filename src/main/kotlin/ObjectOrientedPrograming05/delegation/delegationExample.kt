@@ -1,7 +1,5 @@
 package ObjectOrientedPrograming05.delegation
 
-import java.io.File
-
 
 /**
  * Here we will Cover all the Cases of the Delication's
@@ -13,6 +11,9 @@ import java.io.File
 fun main() {
 
     
+    val printer=RealPrinter()
+    val officePrinter=OfficePrinter(printer)
+    officePrinter.print()
 
 
     val fileLogger=FileLogger()
@@ -31,6 +32,14 @@ fun main() {
     val agent=Agent()
     val travelApplication=TravelApplication(agent)
     travelApplication.bookFight(100L)
+
+    val aiAgent=AntiGravity()
+    val p=Person(aiAgent)
+    p.work()
+
+
+    val employee=employee(aiAgent)
+    employee.code()
 
 
 
@@ -121,4 +130,46 @@ class Agent:flightBooking{
 class TravelApplication(
     agent: Agent
 ):flightBooking by agent
+
+
+
+
+interface Printer{
+    fun print()
+}
+
+class RealPrinter:Printer{
+    override fun print() {
+        println("Printed By Real Printer")
+    }
+
+}
+
+class OfficePrinter(printer: Printer):Printer by printer
+
+
+
+
+interface Ai{
+    fun code()
+}
+
+class AntiGravity:Ai{
+    override fun code() {
+        println("Coding in AntiGravity")
+    }
+
+}
+class Person(val ai:Ai){
+
+    fun work(){
+        ai.code()
+    }
+}
+
+
+
+
+class employee(ai: Ai):Ai by ai
+
 
